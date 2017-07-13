@@ -150,7 +150,7 @@ module PagSeguro
 
     def environment=(environment)
       warn "[DEPRECATION] `environment=` is deprecated and will be removed. Please use configuration block instead."
-      configuration.environment = environment
+      configuration.environment = environment.to_s.to_sym
     end
 
     def encoding=(encoding)
